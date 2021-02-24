@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>간단한 계산기</title>
+        <script>
+            function cal(){
+                var v1 = Number(document.getElementById("v1").value);
+                var v2 = Number(document.getElementById("v2").value);
+                var op = document.getElementById("op").value;
+                var res;
+
+                if(op == "+"){
+                    res = v1+v2;
+                }else if(op == "-"){
+                    res = v1-v2;
+                }else if(op == "*"){
+                    res = v1*v2;
+                }else if(op == "/"){
+                    res = v1/v2;
+                }
+                document.getElementById("res").value = res;
+            } //
+
+            function reset(){
+                document.getElementById("v1").value = "";
+                document.getElementById("v2").value = "";
+                document.getElementById("op").value = "";
+                document.getElementById("res").value = "";
+            }
+        </script>
+    </head>
+    <body>
+        값1:
+        <input type="text" id="v1"><br>
+        값2:
+        <input type="text" id="v2"><br>
+        연산자:
+        <input type="text" id="op"><br>
+        결과:
+        <input type="text" id="res">
+        <br><br>
+        <input type="button" value="계산하기" onclick="cal()">
+        <input type="button" value="초기화" onclick="reset()">
+    </body>
+</html>
