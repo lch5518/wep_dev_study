@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["es2015"],
-    "modue": "commonjs",
+    "module": "commonjs",
     "outDir": "disst",
     "sourceMap": true,
     "strict": true,
