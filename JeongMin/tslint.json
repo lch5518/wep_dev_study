@@ -1,0 +1,10 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommenden"
+    ],
+    "rules": {
+        "semicolon": false,
+        "trailing-comma": false
+    }
+}
