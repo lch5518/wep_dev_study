@@ -1,16 +1,21 @@
-let studentID: number = 12345;
-let studentName: string = 'Jenny Kim';
-let age: number =21;
-let gender: string = 'female';
-let subject: string = 'Javascript';
-let courseCompleted: boolean = false;
+//let studentID: number = 12345;
+//let studentName: string = 'Jenny Kim';
+//let age: number =21;
+//let gender: string = 'female';
+//let subject: string = 'Javascript';
+//let courseCompleted: boolean = false;
+
+enum GenderType {
+        male,
+        female
+}
 
 let student1 = {
         studentID: 454545,
         studentName: 'Bart Simpson',
         age: 10,
-        gender: 'male' ,
-        subject: 'Node JS' ,
+        gender: GenderType.male,
+        subject: 'Node JS',
         courseCompleted: false
 }
 
@@ -18,7 +23,7 @@ interface Student {
         studentID: number;
         studentName: string;
         age?: number;
-        gender: string;
+        gender: GenderType;
         subject: string;
         courseCompleted: boolean;
 
@@ -30,7 +35,7 @@ function getStudentDetails(studentID: number): Student {
         return {
                 studentID: 123456,
                 studentName: 'Mark Jacobs',
-                gender: 'male' ,
+                gender: GenderType.male ,
                 subject: 'Node JS' ,
                 courseCompleted: true
         };
@@ -44,7 +49,7 @@ saveStudentDetails({
         studentID: 121212,
         studentName: 'Janet Jackson',
         age: 30,
-        gender: 'female' ,
+        gender: GenderType.female ,
         subject: 'Node JS' ,
         courseCompleted: false
 })
